@@ -1,16 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
+import { Header } from './Header/Header';
+import { Home } from '../pages/Home';
+import { Movies } from '../pages/Movies';
+import { routes } from '../routes';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Routes>
+      <Route path={routes.Home} element={<Header />}>
+        <Route index element={<Home />} />
+        <Route path={routes.Movies} element={<Movies />} />
+      </Route>
+    </Routes>
   );
 };

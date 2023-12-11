@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
 
-export const Reviews = () => {
+const Reviews = () => {
   const { movieId } = useParams();
 
   const [reviewsMovie, setReviewMovie] = useState([]);

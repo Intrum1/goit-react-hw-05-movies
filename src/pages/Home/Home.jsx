@@ -4,7 +4,7 @@ import { fetchTrendingList } from '../../components/service/servise';
 import { MoviesList } from '../../components/MoviesList/MoviesList';
 import Loader from 'components/Loader/Loader';
 
-export const Home = () => {
+const Home = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -26,6 +26,8 @@ export const Home = () => {
     getData();
   }, []);
 
+ 
+
   return (
     <div>
       {isLoading && <Loader />}
@@ -33,7 +35,9 @@ export const Home = () => {
       {error && (
         <h2>Oops! Something went wrong! Please try reloading this page!</h2>
       )}
-      {movies.length > 0 && <MoviesList movies={movies} />}
+      {movies.length > 0 && <MoviesList items={movies} />}
     </div>
   );
 };
+
+export default Home;

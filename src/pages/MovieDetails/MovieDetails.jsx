@@ -10,7 +10,7 @@ import {
   useParams,
 } from 'react-router-dom';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
 
   const [selectedMovie, setSelectedMovie] = useState(null);

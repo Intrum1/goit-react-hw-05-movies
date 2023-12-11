@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import css from './Cast.module.css';
 import { Loader } from '../Loader/Loader';
 
-export const Cast = () => {
+const Cast = () => {
   const { movieId } = useParams();
 
   const [castMovie, setCastMovie] = useState([]);

@@ -5,7 +5,7 @@ import MoviesList from 'components/MoviesList/MoviesList';
 import { useSearchParams } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
 
-export const Movies = () => {
+const Movies = () => {
   const [loading, setLoading] = useState(false);
   const [movieItems, setMovieItems] = useState([]);
 
